@@ -15,7 +15,7 @@ Blink detection is a core computer vision task with applications in medical diag
 ## Repository Structure & Code Files
 
 ### 1. Classification-Based Approaches (CNN)
-These scripts implement transfer learning for state-of-the-art CNN classifiers.
+These scripts implement transfer learning for CNN classifiers.
 
 | File | Description |
 | :--- | :--- |
@@ -23,7 +23,7 @@ These scripts implement transfer learning for state-of-the-art CNN classifiers.
 | `MobileNet_Implementation_fullrun.ipynb` | Jupyter Notebook for training and fine-tuning the **MobileNetV2** model. |
 
 ### 2. Segmentation-Based Approach (SAM2 - Primary Method)
-This is the core novel contribution of the project, using SAM2 and heuristic rules for explainable blink detection.
+This is the core contribution of the project, using SAM2 and heuristic rules for blink detection.
 
 | File | Description |
 | :--- | :--- |
