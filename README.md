@@ -2,16 +2,15 @@
 
 
 
-The project presents a comparative analysis of modern deep learning methods for blink detection, contrasting high-accuracy **classification-based Convolutional Neural Networks (CNNs)** with a novel, **explainable segmentation-based approach** using Meta's Segment Anything Model 2 (SAM2).
+The project presents a comparative analysis of modern deep learning methods for blink detection, contrasting **classification-based Convolutional Neural Networks (CNNs)** with a **explainable segmentation-based approach** using Meta's Segment Anything Model 2 (SAM2).
 
 ## Abstract
-
-Blink detection is a core computer vision task with applications in medical diagnostics, driver monitoring, and human-computer interaction. While CNN classifiers like InceptionResNetV2 and MobileNetV2 achieve high accuracy (>97%), they often function as "black boxes." This project explores using the Segment Anything Model (SAM2) to create a transparent pipeline that generates segmentation masks of the eye region, allowing for heuristic-based, verifiable classification. The segmentation approach achieved a robust accuracy of **94.1%** and provided key advantages in explainability, such as identifying mislabelled data in the original dataset.
+Blink detection is a core computer vision task with applications in medical diagnostics, driver monitoring, and human-computer interaction. While CNN classifiers like InceptionResNetV2 and MobileNetV2 achieve high accuracy (>97%), they can function as "black boxes." This project explores using the Segment Anything Model (SAM2) to create a transparent pipeline that generates segmentation masks of the eye region, allowing for heuristic-based, verifiable classification. The segmentation approach achieved an accuracy of **94.1%** and provides key advantages in explainability, such as identifying mislabelled data in the original dataset.
 
 **Key Findings:**
--   **Classification (CNNs):** Superior accuracy (**InceptionResNetV2: 98.1%**, MobileNetV2: 97.3%).
--   **Segmentation (SAM2 + Heuristics):** High explainability, robust performance (**94.1%**), and the ability to audit and clean dataset labels.
--   **Trade-off:** A clear trade-off between ultimate performance and model transparency was identified.
+-   **Classification (CNNs):** High accuracy (**InceptionResNetV2: 98.1%**, MobileNetV2: 97.3%).
+-   **Segmentation (SAM2 + Heuristics):** High explainability, good performance (**94.1%**), and the ability to audit and clean dataset labels.
+-   **Trade-off:** A trade-off between performance and model transparency was identified
 
 ## Repository Structure & Code Files
 
@@ -85,10 +84,6 @@ Potential improvements and next steps, as outlined in the thesis, include:
 -   Generalizing heuristic rules to be resolution-invariant.
 -   Fine-tuning U-Net or DeepLabV3+ with a dedicated eye segmentation dataset.
 -   Experimenting with smaller, faster variants of SAM2 for real-time applications.
-
-## Thesis
-
-The full dissertation document detailing the background, methodology, results, and discussion is available upon request.
 
 ## Author
 
