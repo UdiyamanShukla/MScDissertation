@@ -84,4 +84,3 @@ Potential improvements and next steps, as outlined in the thesis, include:
 ## Acknowledgments
 -   Supervisor: Dr. Gabriella Miles, University of Bristol.
 -   The dataset was provided via the Open Science Framework (OSF).
--   This work built upon foundational research in computer vision and deep learning.
