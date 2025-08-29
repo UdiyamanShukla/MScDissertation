@@ -67,7 +67,7 @@ Initial experiments with other segmentation architectures.
 2.  **Run Classification Models:** Execute the `InceptionV2.py` script or the `MobileNet_Implementation_fullrun.ipynb` notebook to train and evaluate the CNN models.
 3.  **Run Segmentation Pipeline:** The main workflow is in `Aspect_ratioed_Revamped_on_new_CSV_SAM2_contour_analysis_compiler_Tester1.ipynb`. This notebook loads images, prompts SAM2 with eye coordinates, applies heuristic rules, and performs classification.
 
-## 🧠 Methodology Overview
+## Methodology Overview
 
 1.  **Data Preprocessing:** Images were resized and organized. Eye center coordinates were filtered and consolidated.
 2.  **Classification (CNN):** Implemented transfer learning with a two-phase strategy: (i) training only the final layer, (ii) fine-tuning all layers at a low learning rate.
@@ -78,7 +78,7 @@ Initial experiments with other segmentation architectures.
 4.  **Evaluation:** Models were evaluated on a held-out validation set using accuracy, precision, recall, and F1-score.
 
 
-## ➡Future Work
+## Future Work
 
 Potential improvements and next steps, as outlined in the thesis, include:
 -   Integrating pupil detection heuristics to handle highly eccentric eye shapes.
@@ -94,7 +94,6 @@ The full dissertation document detailing the background, methodology, results, a
 
 **Udiyaman Shukla**
 -   University of Bristol, MSc in Data Science
-
 
 ## Acknowledgments
 
