@@ -5,12 +5,11 @@
 The project presents a comparative analysis of modern deep learning methods for blink detection, contrasting **classification-based Convolutional Neural Networks (CNNs)** with a **explainable segmentation-based approach** using Meta's Segment Anything Model 2 (SAM2).
 
 ## Abstract
-Blink detection is a core computer vision task with applications in medical diagnostics, driver monitoring, and human-computer interaction. While CNN classifiers like InceptionResNetV2 and MobileNetV2 achieve high accuracy (>97%), they can function as "black boxes." This project explores using the Segment Anything Model (SAM2) to create a transparent pipeline that generates segmentation masks of the eye region, allowing for heuristic-based, verifiable classification. The segmentation approach achieved an accuracy of **94.1%** and provides key advantages in explainability, such as identifying mislabelled data in the original dataset.
+Blink detection is a core computer vision task with applications in medical diagnostics, driver monitoring, and human-computer interaction. This project explores using the Segment Anything Model (SAM2) to create a transparent pipeline that generates segmentation masks of the eye region, allowing for heuristic-based classification. The segmentation approach achieved an accuracy of **94.1%** and provides key advantages in explainability, such as identifying mislabelled data.
 
 **Key Findings:**
 -   **Classification (CNNs):** High accuracy (**InceptionResNetV2: 98.1%**, MobileNetV2: 97.3%).
 -   **Segmentation (SAM2 + Heuristics):** High explainability, good performance (**94.1%**), and the ability to audit and clean dataset labels.
--   **Trade-off:** A trade-off between performance and model transparency was identified
 
 ## Repository Structure & Code Files
 
@@ -27,7 +26,7 @@ This is the core contribution of the project, using SAM2 and heuristic rules for
 
 | File | Description |
 | :--- | :--- |
-| `Aspect_ratioed_Revamped_on_new_CSV_SAM2_contour_analysis_compiler_Tester1.ipynb` | **Main Testing Script.** Uses the finalized heuristic rules to classify images as 'blink' or 'open' using SAM2-generated masks. |
+| `Aspect_ratioed_eccentricity_SAM2_contour_analysis_compiler_model_tester.ipynb` | **Main Testing Script.** Uses the finalized heuristic rules to classify images as 'blink' or 'open' using SAM2-generated masks. |
 | `Revamped_Error_analysis_SAM2_compiler.ipynb` | **Model Development Script.** Used for exploratory analysis, developing heuristics (mask area, score, eccentricity), and error analysis. |
 | `Ellipse_eccentricity_aspect_ratio.ipynb` | **Supporting Analysis Script.** Contains code for calculating key geometric properties (eccentricity, aspect ratio) from segmentation masks. |
 
@@ -49,15 +48,7 @@ Initial experiments with other segmentation architectures.
 
 *   **Python 3.9**
 *   Key Libraries: `torch`, `torchvision`, `tensorflow`, `keras`, `opencv-python`, `numpy`, `pandas`, `matplotlib`, `seaborn`, `scikit-learn`, `jupyter`
-*   For SAM2: Install `segment-anything` package and download the `sam2.1_hiera_large.pt` model checkpoint from Meta's official repository.
-
-### Installation
-
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/YourUsername/MScDissertation-BlinkDetection.git
-    cd MScDissertation-BlinkDetection
-    ```
+*   For SAM2: Install `segment-anything` package and download the `sam2.1_hiera_large.pt` model checkpoint from Meta's official repository (https://github.com/facebookresearch/segment-anything)
 
 
 ### Usage
@@ -91,7 +82,6 @@ Potential improvements and next steps, as outlined in the thesis, include:
 -   University of Bristol, MSc in Data Science
 
 ## Acknowledgments
-
 -   Supervisor: Dr. Gabriella Miles, University of Bristol.
 -   The dataset was provided via the Open Science Framework (OSF).
 -   This work built upon foundational research in computer vision and deep learning.
