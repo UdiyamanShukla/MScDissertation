@@ -1,12 +1,10 @@
 # MSc Dissertation: A Comparison of Segmentation- and Classification-based Approaches for Blink Detection
 
-![Python](https://img.shields.io/badge/Python-3.9-blue.svg)
-![Framework](https://img.shields.io/badge/Framework-PyTorch%20%7C%20TensorFlow-orange.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-This repository contains the code and implementation details for my MSc Dissertation in Engineering Mathematics at the University of Bristol. The project presents a comparative analysis of modern deep learning methods for blink detection, contrasting high-accuracy **classification-based Convolutional Neural Networks (CNNs)** with a novel, **explainable segmentation-based approach** using Meta's Segment Anything Model 2 (SAM2).
 
-## 📖 Abstract
+The project presents a comparative analysis of modern deep learning methods for blink detection, contrasting high-accuracy **classification-based Convolutional Neural Networks (CNNs)** with a novel, **explainable segmentation-based approach** using Meta's Segment Anything Model 2 (SAM2).
+
+## Abstract
 
 Blink detection is a core computer vision task with applications in medical diagnostics, driver monitoring, and human-computer interaction. While CNN classifiers like InceptionResNetV2 and MobileNetV2 achieve high accuracy (>97%), they often function as "black boxes." This project explores using the Segment Anything Model (SAM2) to create a transparent pipeline that generates segmentation masks of the eye region, allowing for heuristic-based, verifiable classification. The segmentation approach achieved a robust accuracy of **94.1%** and provided key advantages in explainability, such as identifying mislabelled data in the original dataset.
 
@@ -15,7 +13,7 @@ Blink detection is a core computer vision task with applications in medical diag
 -   **Segmentation (SAM2 + Heuristics):** High explainability, robust performance (**94.1%**), and the ability to audit and clean dataset labels.
 -   **Trade-off:** A clear trade-off between ultimate performance and model transparency was identified.
 
-## 📁 Repository Structure & Code Files
+## Repository Structure & Code Files
 
 ### 1. Classification-Based Approaches (CNN)
 These scripts implement transfer learning for state-of-the-art CNN classifiers.
@@ -47,7 +45,6 @@ Initial experiments with other segmentation architectures.
 | :--- | :--- |
 | `consolidated_coordinates.csv` | Processed CSV file containing AI-predicted eye center coordinates for images used in the segmentation pipeline. |
 
-## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -63,12 +60,6 @@ Initial experiments with other segmentation architectures.
     cd MScDissertation-BlinkDetection
     ```
 
-2.  (Recommended) Create a virtual environment and install dependencies:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
-    pip install -r requirements.txt
-    ```
 
 ### Usage
 
@@ -86,15 +77,8 @@ Initial experiments with other segmentation architectures.
     *   **Classification:** The final selected mask was classified based on its pixel area.
 4.  **Evaluation:** Models were evaluated on a held-out validation set using accuracy, precision, recall, and F1-score.
 
-## 📊 Results
 
-| Model | Accuracy | Precision | Recall | F1-Score | Key Strength |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **InceptionResNetV2** | **98.1%** | 0.968 | 0.993 | 0.980 | Highest Accuracy |
-| **MobileNetV2** | 97.3% | 0.974 | 0.970 | 0.972 | Computational Efficiency |
-| **SAM2 + Heuristics** | 94.1% | 0.943 | 0.949 | 0.946 | **Explainability & Transparency** |
-
-## ➡️ Future Work
+## ➡Future Work
 
 Potential improvements and next steps, as outlined in the thesis, include:
 -   Integrating pupil detection heuristics to handle highly eccentric eye shapes.
@@ -102,21 +86,18 @@ Potential improvements and next steps, as outlined in the thesis, include:
 -   Fine-tuning U-Net or DeepLabV3+ with a dedicated eye segmentation dataset.
 -   Experimenting with smaller, faster variants of SAM2 for real-time applications.
 
-## 📄 Thesis
+## Thesis
 
 The full dissertation document detailing the background, methodology, results, and discussion is available upon request.
 
-## 👤 Author
+## Author
 
 **Udiyaman Shukla**
--   University of Bristol, MSc in Engineering Mathematics
--   [LinkedIn](https://www.linkedin.com/in/yourprofile/) | [Email](mailto:your.email@bristol.ac.uk)
+-   University of Bristol, MSc in Data Science
 
-## 🙏 Acknowledgments
+
+## Acknowledgments
 
 -   Supervisor: Dr. Gabriella Miles, University of Bristol.
 -   The dataset was provided via the Open Science Framework (OSF).
 -   This work built upon foundational research in computer vision and deep learning.
-
----
-**Note:** This code is provided for academic and research purposes. Please ensure proper attribution if you use or build upon this work.
